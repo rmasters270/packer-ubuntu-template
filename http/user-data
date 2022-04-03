@@ -1,0 +1,13 @@
+#cloud-config
+autoinstall:
+  version: 1
+  early-commands:
+    - systemctl stop ssh
+  identity:
+    hostname: template
+    username: ubuntu
+    password: $6$rounds=656000$fkgyEpahzu$TdS2HfnsGQPs2xniy6ybfRWR5L35KP3waTeZcbKptNQM4S/2c9i5pG9JnmXpAEHv/pM14Xd38JOl5X8YFq31a/
+  packages:
+    - qemu-guest-agent
+  ssh:
+    install-server: true

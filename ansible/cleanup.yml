@@ -22,6 +22,21 @@
       path: /etc/machine-id
       size: 0
 
+  - name: Remove network config
+    ansible.builtin.file:
+      path: /etc/cloud/cloud.cfg.d/subiquity-disable-cloudinit-networking.cfg
+      state: absent
+
+  - name: Remove netplan installer config
+    ansible.builtin.file:
+      path: /etc/netplan/00-installer-config.yaml
+      state: absent
+
+  - name: Remove netplan cloud-init config
+    ansible.builtin.file:
+      path: /etc/netplan/50-cloud-init.yaml
+      state: absent
+
   - name: Create PVE cloud config
     ansible.builtin.template:
       src: 99_pve.cfg.j2

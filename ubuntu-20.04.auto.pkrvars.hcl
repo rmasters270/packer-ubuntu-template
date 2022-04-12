@@ -13,14 +13,3 @@ disk_size            = "10GB"
 disk_pool            = "zfs"
 disk_pool_type       = "zfspool"
 enable_cloud_init    = true
-
-/* secrets.auto.pkrvars.hcl
-proxmox_host         = "pve.example.com:8006"
-proxmox_node         = "pve"
-proxmox_user         = "root@pam!token-id"
-proxmox_password     = "password"
-proxmox_token        = "proxmox-api-token"
-
-ssh_user             = "ubuntu"
-ssh_password         = "ubuntu"
-*/

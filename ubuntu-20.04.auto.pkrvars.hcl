@@ -3,7 +3,7 @@ iso_checksum         = "sha256:28ccdb56450e643bad03bb7bcf7507ce3d8d90e8bf09e38f6
 iso_storage_pool     = "nas"
 
 vmid                 = 9204
-template_name        = "ubuntu-20-04"
+template_name        = "ubuntu-2004"
 template_description = "packer generated on {{isotime `2006-01-02`}}"
 os                   = "l26"
 memory               = 2048

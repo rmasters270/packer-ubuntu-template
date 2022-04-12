@@ -15,6 +15,6 @@ bootcmd:
   - date > /etc/birth_certificate
 
 runcmd:
-  - dhclient
+  - netplan apply
 
 final_message: "cloud-init complete"

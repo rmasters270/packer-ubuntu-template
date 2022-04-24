@@ -9,10 +9,13 @@
       upgrade: true
       update_cache: true
 
-  - name: Remove dependencies that are no longer required
+  - name: Clean unused packages
     ansible.builtin.apt:
       autoremove: true
       autoclean: true
+
+  - name: Purge old packages
+    ansible.builtin.apt:
       purge: true
 
   - name: Truncate machine-id

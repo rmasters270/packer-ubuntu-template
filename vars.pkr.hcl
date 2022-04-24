@@ -1,39 +1,35 @@
 variable "proxmox_host" {
   type        = string
-  description = "Proxmox host name and port"
-  default     = "pve-fqdn:8006"
+  description = "Proxmox FQDN host name and port"
 }
 variable "proxmox_node" {
   type        = string
   description = "Proxmox node name"
-  default     = "pve"
 }
 variable "proxmox_user" {
   type        = string
   description = "Proxmox user name"
-  default     = "root@pam!token"
 }
 variable "proxmox_password" {
   type        = string
   description = "Proxmox user password"
+  default = ""
   sensitive   = true
-  default     = "password"
 }
 variable "proxmox_token" {
   type        = string
   description = "Proxmox api token"
+  default = ""
   sensitive   = true
 }
 
 variable "iso" {
   type        = string
   description = "URL to an ISO to upload to Proxmox"
-  default     = "https://releases.ubuntu.com/20.04.4/ubuntu-20.04.4-live-server-amd64.iso"
 }
 variable "iso_checksum" {
   type        = string
   description = "Checksum of the ISO"
-  default     = "sha256:28ccdb56450e643bad03bb7bcf7507ce3d8d90e8bf09e38f6bd9ac298a98eaad"
 }
 variable "iso_storage_pool" {
   type        = string

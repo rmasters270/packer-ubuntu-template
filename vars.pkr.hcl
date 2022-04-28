@@ -1,6 +1,6 @@
 variable "proxmox_host" {
   type        = string
-  description = "Proxmox FQDN host name and port"
+  description = "Proxmox FQDN host name and port (e.g. pve.example.com:8006)"
 }
 variable "proxmox_node" {
   type        = string
@@ -12,20 +12,20 @@ variable "proxmox_user" {
 }
 variable "proxmox_password" {
   type        = string
-  description = "Proxmox user password"
+  description = "Proxmox user password. The password or token must be defined. Token takes precedence."
   default = ""
   sensitive   = true
 }
 variable "proxmox_token" {
   type        = string
-  description = "Proxmox api token"
+  description = "Proxmox api token. The password or token must be defined. Token takes precedence."
   default = ""
   sensitive   = true
 }
 
 variable "iso" {
   type        = string
-  description = "URL to an ISO to upload to Proxmox"
+  description = "URL to an ISO which will upload to Proxmox"
 }
 variable "iso_checksum" {
   type        = string
@@ -40,7 +40,7 @@ variable "iso_storage_pool" {
 variable "vmid" {
   type        = number
   description = "Virtual machine ID"
-  default     = 100
+  default     = null
 }
 variable "template_name" {
   type        = string
@@ -50,7 +50,7 @@ variable "template_name" {
 variable "template_description" {
   type        = string
   description = "Proxmox user token"
-  default     = "packer generated"
+  default     = null
 }
 variable "os" {
   type        = string

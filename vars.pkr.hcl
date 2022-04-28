@@ -103,3 +103,8 @@ variable "ssh_password" {
   description = "SSH password"
   sensitive = true
 }
+
+variable "boot_command" {
+  type        = list(string)
+  description = "Boot command to autoinstall Ubuntu"
+}

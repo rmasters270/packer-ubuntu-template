@@ -50,11 +50,7 @@ source "proxmox-iso" "ubuntu" {
   insecure_skip_tls_verify = true
 
   boot_wait    = "6s"
-  boot_command = [
-    "<enter><enter><f6><esc><wait>",
-    "autoinstall ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ ",
-    "<enter>"
-  ]
+  boot_command = var.boot_command
 }
 
 build {

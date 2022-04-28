@@ -13,3 +13,9 @@ disk_size            = "10GB"
 disk_pool            = "zfs"
 disk_pool_type       = "zfspool"
 enable_cloud_init    = true
+
+boot_command = [
+    "<enter><enter><f6><esc><wait>",
+    "autoinstall ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ ",
+    "<enter>"
+  ]

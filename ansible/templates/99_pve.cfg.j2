@@ -11,8 +11,6 @@ package_update: true
 package_upgrade: true
 package_reboot_if_required: true
 
-bootcmd:
-  - date > /etc/birth_certificate
-
 runcmd:
+  - date > /etc/birth_certificate
   - netplan apply

@@ -16,6 +16,7 @@ enable_cloud_init    = true
 
 boot_command = [
     "<enter><enter><f6><esc><wait>",
+    "<bs><bs><bs><bs>",
     "autoinstall ds=nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ ",
-    "<enter>"
+    "--- <enter>"
   ]

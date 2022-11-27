@@ -1,6 +1,6 @@
 variable "proxmox_host" {
   type        = string
-  description = "Proxmox FQDN host name and port (e.g. pve.example.com:8006)"
+  description = "Proxmox FQDN host name and port"
 }
 variable "proxmox_node" {
   type        = string
@@ -12,13 +12,13 @@ variable "proxmox_user" {
 }
 variable "proxmox_password" {
   type        = string
-  description = "Proxmox user password. The password or token must be defined. Token takes precedence."
+  description = "Proxmox password"
   default = ""
   sensitive   = true
 }
 variable "proxmox_token" {
   type        = string
-  description = "Proxmox api token. The password or token must be defined. Token takes precedence."
+  description = "Proxmox api token"
   default = ""
   sensitive   = true
 }
@@ -39,7 +39,7 @@ variable "iso_storage_pool" {
 
 variable "vmid" {
   type        = number
-  description = "Virtual machine ID"
+  description = "Proxmox virtual machine ID"
   default     = null
 }
 variable "template_name" {
@@ -49,7 +49,7 @@ variable "template_name" {
 }
 variable "template_description" {
   type        = string
-  description = "Proxmox user token"
+  description = "Proxmox notes field"
   default     = null
 }
 variable "os" {
@@ -106,5 +106,5 @@ variable "ssh_password" {
 
 variable "boot_command" {
   type        = list(string)
-  description = "Boot command to autoinstall Ubuntu"
+  description = "Boot command to auto install Ubuntu"
 }

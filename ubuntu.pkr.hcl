@@ -49,7 +49,7 @@ source "proxmox-iso" "ubuntu" {
   http_directory           = "${path.root}/http"
   insecure_skip_tls_verify = true
 
-  boot_wait    = "6s"
+  boot_wait    = var.boot_wait
   boot_command = var.boot_command
 }
 

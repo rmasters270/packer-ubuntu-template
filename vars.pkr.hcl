@@ -104,6 +104,11 @@ variable "ssh_password" {
   sensitive = true
 }
 
+variable "boot_wait" {
+  type = string
+  description = "Seconds to wait before entering the boot command."
+  default = "6s"
+}
 variable "boot_command" {
   type        = list(string)
   description = "Boot command to auto install Ubuntu"

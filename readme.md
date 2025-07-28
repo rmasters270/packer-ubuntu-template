@@ -1,4 +1,4 @@
-# Packer Proxmox Ubuntu Template
+# DEPRECATED: Packer Proxmox Ubuntu Template
 
 Use Packer to create a Proxmox Template of Ubuntu server using Subiquity with an option for a Cloud Init drive.
 
